@@ -8,3 +8,4 @@ This is a virtual pad created in opencv python for blue circular/bottel cap.
 5) Find contours.
 6) If contours and its area are in the given range then find center of blue bottelcap using moments.
 7) Draw the line on pad by following the center of bottel cap.
+[vdp_video](https://drive.google.com/file/d/1E6M6i74R00ZIrSbqW4SBJBjlNMdQtRr0/view?usp=sharing)
