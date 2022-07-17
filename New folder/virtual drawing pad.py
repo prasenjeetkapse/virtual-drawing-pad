@@ -26,7 +26,8 @@ while(1):
     mask = cv.inRange(hsv, lower_range, upper_range)
     
     
-    # Find Contours Contours can be explained simply as a curve joining all the continuous points (along the boundary), having same color or intensity. The contours are a useful tool for shape analysis and object detection and recognition.
+    # Find Contours Contours can be explained simply as a curve joining all the continuous points (along the boundary),
+    # having same color or intensity. The contours are a useful tool for shape analysis and object detection and recognition.
     
     contours, hierarchy = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
     cv.drawContours(mask, contours, 0, (0,255,0), 3)
@@ -35,7 +36,7 @@ while(1):
                                  key = cv.contourArea)) > noiseth:
                 
         c = max(contours, key = cv.contourArea) 
-        M= cv.moments(c)   
+        M= cv.moments(c)           # moments are the average of the intensities of an image's pixels. use to find center of stylus.
         x1 = int(M['m10']/M['m00'])
         y1 = int(M['m01']/M['m00'])
 
@@ -62,7 +63,7 @@ while(1):
     if k == 27:
         break
         
-    
+    #Clear the board when pressed 'c'
     if k == ord('c'):
         pad = None
 
