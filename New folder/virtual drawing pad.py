@@ -15,7 +15,7 @@ while(1):
     if pad is None:
         pad = np.zeros_like(frame)
 
-    # Convert BGR to HSV
+    # Convert BGR to HSV  (Image segmentation)
     hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
     
             
