@@ -26,7 +26,8 @@ while(1):
     mask = cv.inRange(hsv, lower_range, upper_range)
     
     
-    # Find Contours
+    # Find Contours Contours can be explained simply as a curve joining all the continuous points (along the boundary), having same color or intensity. The contours are a useful tool for shape analysis and object detection and recognition.
+    
     contours, hierarchy = cv.findContours(mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
     cv.drawContours(mask, contours, 0, (0,255,0), 3)
     
